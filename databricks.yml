@@ -1,0 +1,16 @@
+# Databricks Asset Bundle configuration.
+# Docs: https://docs.databricks.com/en/dev-tools/bundles/index.html
+
+bundle:
+  # Logical name for this bundle — used in resource naming and UI labels.
+  name: equity-research-platform
+
+targets:
+  # The dev target deploys resources with a development-mode prefix so they
+  # don't collide with staging/production resources in the same workspace.
+  dev:
+    mode: development
+    workspace:
+      # TODO: replace with your Databricks workspace URL, e.g.:
+      # host: https://<your-workspace>.azuredatabricks.net
+      host: https://PLACEHOLDER.azuredatabricks.net

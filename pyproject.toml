@@ -1,0 +1,29 @@
+[project]
+name = "equity-research"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "yfinance",
+    "requests",
+    "beautifulsoup4",
+    "pandas",
+    "pyarrow",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+    "black",
+    "mypy",
+]
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "I", "W", "UP"]
+
+[tool.black]
+line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
