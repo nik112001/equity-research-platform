@@ -2,6 +2,9 @@
 name = "equity-research"
 version = "0.1.0"
 requires-python = ">=3.11"
+authors = [
+    {name = "Nikhil Kotta", email = "nikhilkotta20@gmail.com"}
+    ]
 dependencies = [
     "yfinance",
     "requests",
