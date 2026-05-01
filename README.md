@@ -4,6 +4,16 @@ An end-to-end equity research platform built on Databricks, combining Delta Live
 
 **Status:** in development
 
+## Setup
+
+### Unity Catalog
+
+Bootstrap the catalog in two steps:
+
+1. **Create the catalog** (one time, via UI): in your Databricks workspace open **Data > Catalogs > Create Catalog**, name it `equity_research`, and choose a storage location.
+
+2. **Run the setup script**: open a Databricks SQL editor, paste the contents of [`sql/00_setup_catalog.sql`](sql/00_setup_catalog.sql), and click **Run**. The script creates the `bronze`, `silver`, and `gold` schemas and the `bronze.raw_filings` volume. It is fully idempotent — safe to run multiple times with no side effects.
+
 ## Stack
 
 - **Databricks** — unified compute, DLT pipelines, Unity Catalog
